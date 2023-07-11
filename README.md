@@ -1,1 +1,1 @@
-Updated clients pages. Can be accessed through localhost:3000/clients and analyze the console log.
+overall navigating is implemented here.
