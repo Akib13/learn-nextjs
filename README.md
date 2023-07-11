@@ -1,1 +1,1 @@
-Updated different pages. Can be accessed through localhost:3000/portfolio or similar addresses.
+Updated different pages. Can be accessed through localhost:3000/portfolio/something and analyze the console log.
