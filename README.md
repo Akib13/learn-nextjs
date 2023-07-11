@@ -1,1 +1,1 @@
-Updated client pages. Can be accessed through localhost:3000/client/something and analyze the console log.
+Updated blog pages. Can be accessed through localhost:3000/blog/something/... and analyze the console log.
