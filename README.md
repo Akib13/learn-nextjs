@@ -1,1 +1,1 @@
-Added the first page where it shows the info of that page which is the default page on localhost:3000/.
+Updated different pages. Can be accessed through localhost:3000/portfolio or similar addresses.
