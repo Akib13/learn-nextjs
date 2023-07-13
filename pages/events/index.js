@@ -3,6 +3,7 @@ import EventsSearch from "@/components/events/events-search";
 import { getAllEvents } from "../../helpers/api-util";
 import { useRouter } from "next/router";
 import { Fragment } from "react";
+import Head from "next/head";
 
 function AllEventsPage(props) {
   const router = useRouter();
@@ -18,6 +19,10 @@ function AllEventsPage(props) {
 
   return (
     <Fragment>
+      <Head>
+        <title>All Events</title>
+        <meta name="Description" content="Find a lot of great events around you" />
+      </Head>
       <EventsSearch onSearch={findEventsHandler} />
       <EventList items={events} />
     </Fragment>
