@@ -1,4 +1,6 @@
-function handler(req, res) {
+import { MongoClient } from "mongodb";
+
+async function handler(req, res) {
   if (req.method === "POST") {
     const userEmail = req.body.email;
 
@@ -6,7 +8,17 @@ function handler(req, res) {
       res.status(422).json({ message: "Invalid email address." });
       return;
     }
-    console.log(userEmail);
+
+    const client = await MongoClient.connect(
+      "mongodb+srv://Akib13:Akib13@cluster0.zwtrljo.mongodb.net/?retryWrites=true&w=majority"
+    );
+    const db = client.db("newsletter");
+
+    await db.collection("emails").insertOne({ email: userEmail });
+
+    client.close();
+
+    // console.log(userEmail);
     res.status(201).json({ message: "Signed up!" });
   }
 }
